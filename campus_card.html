@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>福州大学一码通</title>
+    <style>
+        * {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;padding: 0;}
+        body {background-color:#0a84bd;margin: 5px 0px 0px 0px;}
+    </style>
+    <script type="text/javascript">
+        window.onload=function()
+        {
+            window.requestAnimationFrame(getDate)
+        }
+        function getDate()
+        {
+            window.setTimeout(function(){
+                window.requestAnimationFrame(getDate)
+            },1000/2)
+            var d=new Date();   
+            var year=d.getFullYear()    //获取年
+            var month=d.getMonth()+1;   //获取月     Date 对象返回月份 (0 ~ 11)
+            var day=d.getDay()          //获取日
+            var days=d.getDate()        //获取日期
+            var hour=d.getHours()       //获取小时
+            var minute=d.getMinutes()   //获取分钟
+            var second=d.getSeconds()   //获取秒
+            // 个位前面添0
+            if(month<10) month="0"+month
+            if(days<10) days="0"+days
+            if(hour<10) hour="0"+hour
+            if(minute<10) minute="0"+minute
+            if(second<10) second="0"+second
+            var week=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六")
+            var Tools=document.getElementById("time_1")
+            var Tools2=document.getElementById("time_2")
+            var Tools3=document.getElementById("time_3")
+            var time1=month+"月"+days+"日"
+            var time2=second
+            var time3=hour+":"+minute
+            Tools.innerHTML=time1
+            Tools2.innerHTML=time2
+            Tools3.innerHTML=time3
+        }
+    </script>
+</head>
+<body>
+    <div style=" margin-left: 7%;margin-right: 7%;">
+        <ul style="line-height: 42px;list-style: none;display:inline-block;font-size: 20px;color: #ffffff; padding-left: 0;margin-bottom: 20px;margin-top: 6px;">
+            <li>姓名：王宇鑫</li>
+            <li>部门：物理与信息工程学院</li>
+        </ul>
+        <img src="1.png" alt="1.png" width="100" height="100" style="display:block;float: right;">
+    </div>
+    <div  style=" background-color: #ffffff;margin-left: 7%;margin-right: 7%;border-radius: 8px;margin-bottom:26px;">
+        <img src="2.png" alt="2.png" style="clear: both;display: block;margin:auto;padding-top: 20px; " >
+        <ul style="text-align:center;margin-top:0;margin-bottom: 0;">
+            <li id="time_1" style="font-size: 19px;font-weight:600;color:#1d953f;text-align:center;display:inline-block"></li>
+            <li id="time_2" style="font-size: 36px;font-weight:600;color:#1d953f;text-align:center;display:inline-block"></li>
+            <li id="time_3" style="font-size: 19px;font-weight:600;color:#1d953f;text-align:center;display:inline-block"></li>
+        </ul>
+        <img src="3.png" alt="3.png" style="clear: both;display: block;margin:auto;padding-top: 20px; " >
+        <marquee style="padding-top: 8px;"><span style="line-height: 47px;font-size: 40px;color: #1d953f;">敬业</span></marquee>
+        <p style="font-size: 10px;color:#1d953f;margin:0 10.4% 0 10.4%;">未见异常，允许通行，请主动出示，配合检测，并做好自我防护，出行前请确认。</p>
+        <img src="4.png" alt="4.png" width="20" height="20" style="clear: both;display: inline-block;margin-left: 30px;margin-top: 33px;margin-right: 3px;" >
+        <ul style="color:#5b5b5b;font-size: 13px;list-style: none;display: inline-block;text-align:left;margin-top:0;margin-bottom: 0;margin-bottom: 26px;">
+            <li  style="font-weight:700;">一卡通</li>
+            <li >适用所有场景</li>
+        </ul>
+    </div>
+    <div width="100%" style="text-align: center;">
+        <span style="color:white;border: 1px solid;border-radius: 5px;font-size: 17px;font-weight:600;padding: 5px;">每日健康填报</span>
+    </div>
+       
+    
+</body>
+</html>
